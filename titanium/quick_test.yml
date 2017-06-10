@@ -1,0 +1,16 @@
+execution:
+- executor: pbench
+  scenario: quick-test
+  hold-for: 1m
+  throughput: 50
+  iterations: 100
+
+scenarios:
+  quick-test:
+    default-address: http://blazedemo.com/
+    requests:
+      - /
+      - /vacation.html
+
+reporting:
+- module: console
